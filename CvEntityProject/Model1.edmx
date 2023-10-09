@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBCVENTITYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBCVENTITYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_AboutMe">
           <Key>
             <PropertyRef Name="ID" />
@@ -32,6 +32,7 @@
           <Property Name="fullName" Type="varchar" MaxLength="50" />
           <Property Name="mail" Type="varchar" MaxLength="50" />
           <Property Name="message" Type="varchar" MaxLength="500" />
+          <Property Name="topic" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tbl_MyWorks">
           <Key>
@@ -55,8 +56,7 @@
           <EntitySet Name="tbl_MyWorks" EntityType="Self.tbl_MyWorks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Skills" EntityType="Self.tbl_Skills" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBCVENTITYModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -87,6 +87,7 @@
           <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="topic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tbl_MyWorks">
           <Key>
@@ -140,6 +141,7 @@
           <EntitySetMapping Name="tbl_Contact">
             <EntityTypeMapping TypeName="DBCVENTITYModel.tbl_Contact">
               <MappingFragment StoreEntitySet="tbl_Contact">
+                <ScalarProperty Name="topic" ColumnName="topic" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="fullName" ColumnName="fullName" />
                 <ScalarProperty Name="mail" ColumnName="mail" />

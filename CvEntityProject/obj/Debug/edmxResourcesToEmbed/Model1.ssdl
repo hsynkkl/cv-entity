@@ -27,6 +27,7 @@
     <Property Name="fullName" Type="varchar" MaxLength="50" />
     <Property Name="mail" Type="varchar" MaxLength="50" />
     <Property Name="message" Type="varchar" MaxLength="500" />
+    <Property Name="topic" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tbl_MyWorks">
     <Key>

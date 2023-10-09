@@ -25,6 +25,7 @@
     <EntitySetMapping Name="tbl_Contact">
       <EntityTypeMapping TypeName="DBCVENTITYModel.tbl_Contact">
         <MappingFragment StoreEntitySet="tbl_Contact">
+          <ScalarProperty Name="topic" ColumnName="topic" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="fullName" ColumnName="fullName" />
           <ScalarProperty Name="mail" ColumnName="mail" />
