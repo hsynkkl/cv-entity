@@ -34,7 +34,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="w3_agile_main_grids">
             <div class="w3layouts_main_grid_left">
                 <div class="w3_main_grid_left_grid">
-                    <h2>adsoyad</h2>
+                    <h2>adsoyad123</h2>
                     <p>Bilgisayar Mühendisi</p>
                     <div class="w3l_figure">
                         <img src="/web/images/1.png" alt=" " />
