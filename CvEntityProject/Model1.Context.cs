@@ -30,5 +30,6 @@ namespace CvEntityProject
         public virtual DbSet<tbl_Contact> tbl_Contact { get; set; }
         public virtual DbSet<tbl_MyWorks> tbl_MyWorks { get; set; }
         public virtual DbSet<tbl_Skills> tbl_Skills { get; set; }
+        public virtual DbSet<tbl_Admin> tbl_Admin { get; set; }
     }
 }

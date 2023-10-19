@@ -24,6 +24,14 @@
           <Property Name="address" Type="varchar" MaxLength="50" />
           <Property Name="location" Type="varchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="tbl_Admin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="10" />
+        </EntityType>
         <EntityType Name="tbl_Contact">
           <Key>
             <PropertyRef Name="ID" />
@@ -52,6 +60,7 @@
         <EntityContainer Name="DBCVENTITYModelStoreContainer">
           <EntitySet Name="tbl_AboutMe" EntityType="Self.tbl_AboutMe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Address" EntityType="Self.tbl_Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Admin" EntityType="Self.tbl_Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Contact" EntityType="Self.tbl_Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_MyWorks" EntityType="Self.tbl_MyWorks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Skills" EntityType="Self.tbl_Skills" Schema="dbo" store:Type="Tables" />
@@ -110,7 +119,16 @@
           <EntitySet Name="tbl_Contact" EntityType="Self.tbl_Contact" />
           <EntitySet Name="tbl_MyWorks" EntityType="Self.tbl_MyWorks" />
           <EntitySet Name="tbl_Skills" EntityType="Self.tbl_Skills" />
+          <EntitySet Name="tbl_Admin" EntityType="DBCVENTITYModel.tbl_Admin" />
         </EntityContainer>
+        <EntityType Name="tbl_Admin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -163,6 +181,15 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="skills" ColumnName="skills" />
                 <ScalarProperty Name="rate" ColumnName="rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Admin">
+            <EntityTypeMapping TypeName="DBCVENTITYModel.tbl_Admin">
+              <MappingFragment StoreEntitySet="tbl_Admin">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
